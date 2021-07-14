@@ -1,0 +1,12 @@
+<div *ngIf="cardItems.length===0"class="alert alert-info">No stocks are avalible</div>
+
+
+<ul *ngIf="cardItems.length > 0" class="list-group">
+    <li class="list-group-item" *ngFor="let item of cardItems">
+        <app-card-items [cardItem]="item"></app-card-items>
+    </li>
+    <li class="list-group-item list-group-item-action list-group-item-dark ">
+        <strong>Total: {{ cardTotal | currency: 'INR' }}</strong>
+    </li>
+    
+</ul>

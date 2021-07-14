@@ -1,0 +1,66 @@
+.row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-1
+{
+    flex-basis: 35%;
+}
+.col-2
+{
+    flex-basis: 65%;
+    min-width: 550px;
+}
+.col-2 img{
+    max-width: 100%;
+    height: 600px;
+   
+ 
+
+}img
+{
+    height: 700px;
+    width:150%;
+    
+}
+.col-2 h1{
+ font-size: 50px;
+ line-height: 60px;
+ margin:26px 0;
+ font-family: 'Mate SC', serif;
+
+
+}
+h1{
+    font-family: 'Mate SC', serif;
+}
+
+p{
+    color: black;
+    font-size:18px;
+    font-family: 'Mate SC', serif;
+ }
+ .btn
+ {
+    background-image: linear-gradient(to right,rgb(63, 63, 63), rgb(53, 164, 255));
+    font-weight: bold;
+    color:aliceblue;
+    width: 170px;
+    height: 40px;
+    
+    
+    text-align: center;
+ }
+ i{
+     color: #ff3c3c;
+     font-size: 28px;
+ }
+ a:hover
+{
+   text-decoration:wavy;
+   /* transform: 3s; */
+   
+}

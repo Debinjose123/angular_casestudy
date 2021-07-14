@@ -1,0 +1,24 @@
+.nav
+{
+   
+    background-color:gradient(rgb);
+    
+}
+.main
+{
+    margin-left: 1050px;
+}
+/* h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+} */
+a{
+    text-decoration:none;
+}
+a:hover
+{
+   text-decoration: underline;
+   /* transform: 3s; */
+   
+}
+

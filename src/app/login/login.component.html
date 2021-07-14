@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <div class="guest-form-card card">
+
+      <div class="card-header text-center">
+        <h2>Login Here</h2>
+      </div>
+      <div class="card-body">
+<form #loginform="ngForm" (ngSubmit)="loginUser()">
+  <!-- {{loginform.form.valid}} -->
+  <small class="text-danger">{{msg}}</small>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" name="email" placeholder="Enter your emailid" [(ngModel)]="user.emailId" required #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    [class.is-invalid]="email.invalid && email.touched"> 
+    <!-- <small class="text-danger"[class.d-none] ="email.valid || email.untouched">Email Id is required field</small> -->
+    <diV *ngIf="email.errors && (email.invalid && email.touched)">
+      <small class="text-danger" *ngIf="email.errors.required">Email Id is required</small>
+      <small class="text-danger"  *ngIf="email.errors.pattern">Enter the valid emailID</small>
+    </diV>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control"  name ="password"
+    placeholder="Enter your password"
+    [(ngModel)]="user.password"  required #password="ngModel"  
+    [class.is-invalid]="password.invalid && password.touched"> 
+    <small class="text-danger"[class.d-none] ="password.valid || password.untouched">Password is required field</small>
+    
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-secondary" >Login</button>
+<a class=" float-right" style="margin-left:50px" [routerLink]="['/register']"> New user ? Register here </a>
+
+
+
+</form>
+      </div>
+</div>
+</div>
+</div>
